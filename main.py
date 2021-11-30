@@ -10,16 +10,21 @@ def convert(ui):
     ui.lineEdit.setText( str( result ) )
 
 #    print( 'We finally get married!' )
+
+# end function
     
 
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    
     MainWindow = QMainWindow()
     ui = HelloWorld.Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     ui.pushButton.clicked.connect( partial( convert, ui ) )
 #    ui.pushButton.clicked.connect( convert )
+
     sys.exit(app.exec_())
+# end if
